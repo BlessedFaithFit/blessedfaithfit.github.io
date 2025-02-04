@@ -22,7 +22,7 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideInTop 1s ease-out;
+    animation: fadeInHeader 1s ease-out;
 }
 
 header h1 {
@@ -30,7 +30,8 @@ header h1 {
     font-size: 3rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    animation: shake 1s ease infinite;
+    font-weight: bold;
+    animation: fadeInText 0.7s ease-out 0.5s;
 }
 
 /* Navigation */
@@ -54,7 +55,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #aaa;
-    transform: scale(1.2) rotate(-5deg);
+    transform: translateY(-3px);
 }
 
 /* Store Section */
@@ -63,14 +64,15 @@ nav ul li a:hover {
     padding: 50px 0;
     text-align: center;
     opacity: 0;
-    animation: fadeInLeft 1s forwards, slideInUp 1s ease-out 0.2s;
+    animation: fadeInLeft 1s forwards 0.5s;
 }
 
 #store h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
-    animation: bounce 1s ease-in-out 0.2s;
+    font-weight: bold;
+    animation: fadeInText 1s ease-out 0.8s;
 }
 
 /* About Section */
@@ -79,14 +81,15 @@ nav ul li a:hover {
     padding: 50px 0;
     text-align: center;
     opacity: 0;
-    animation: fadeInLeft 1s forwards, slideInUp 1s ease-out 0.4s;
+    animation: fadeInLeft 1s forwards 1s;
 }
 
 #about h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: bounce 1s ease-in-out 0.4s;
+    font-weight: bold;
+    animation: fadeInText 1s ease-out 1.3s;
 }
 
 /* Contact Section */
@@ -95,14 +98,15 @@ nav ul li a:hover {
     padding: 50px 0;
     text-align: center;
     opacity: 0;
-    animation: fadeInLeft 1s forwards, slideInUp 1s ease-out 0.6s;
+    animation: fadeInLeft 1s forwards 1.5s;
 }
 
 #contact h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: bounce 1s ease-in-out 0.6s;
+    font-weight: bold;
+    animation: fadeInText 1s ease-out 1.8s;
 }
 
 /* Footer */
@@ -126,7 +130,7 @@ footer {
     }
 }
 
-@keyframes slideInTop {
+@keyframes fadeInHeader {
     from {
         opacity: 0;
         transform: translateY(-50px);
@@ -137,31 +141,23 @@ footer {
     }
 }
 
-@keyframes slideInUp {
+@keyframes fadeInText {
     from {
         opacity: 0;
-        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
     }
 }
 
@@ -178,29 +174,11 @@ button {
 
 button:hover {
     background-color: #333;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 a:hover {
     text-decoration: underline;
-    transform: scale(1.1) rotate(5deg);
-}
-
-/* Text styling */
-h2, p {
-    font-family: 'Birds of Paradise', cursive;
-    color: #333;
-}
-
-h2 {
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    font-weight: bold;
+    transform: translateY(-3px);
+    color: #888;
 }
