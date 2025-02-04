@@ -1,184 +1,31 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'January Night', sans-serif;
-}
-
-/* Body and main styling */
-body {
-    background-color: #fff;
-    color: #333;
-    font-family: 'January Night', sans-serif;
-    line-height: 1.6;
-    transition: background-color 0.3s ease;
-}
-
-/* Header */
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeInHeader 1s ease-out;
-}
-
-header h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    animation: fadeInText 0.7s ease-out 0.5s;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: 'Birds of Paradise', cursive;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #aaa;
-    transform: translateY(-3px);
-}
-
-/* Store Section */
-#store {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInLeft 1s forwards 0.5s;
-}
-
-#store h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-    animation: fadeInText 1s ease-out 0.8s;
-}
-
-/* About Section */
-#about {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInLeft 1s forwards 1s;
-}
-
-#about h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    animation: fadeInText 1s ease-out 1.3s;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-    opacity: 0;
-    animation: fadeInLeft 1s forwards 1.5s;
-}
-
-#contact h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    animation: fadeInText 1s ease-out 1.8s;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 1rem;
-}
-
-/* Animations */
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInHeader {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hover Effects */
+/* Strong Hover Effects */
 button {
     background-color: #000;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border: 2px solid #fff;
+    padding: 12px 24px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: background-color 0.2s, transform 0.2s, border 0.2s;
 }
 
 button:hover {
     background-color: #333;
-    transform: scale(1.05);
+    transform: scale(1.1); /* Makes the button look tougher and more prominent */
+    border: 2px solid #888; /* Subtle border change */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Birds of Paradise', cursive;
+    transition: color 0.3s, transform 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
-    transform: translateY(-3px);
-    color: #888;
+    color: #333; /* Slight color shift for a strong effect */
+    transform: scale(1.05); /* No bounce, just a strong scale up */
 }
