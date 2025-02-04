@@ -22,6 +22,7 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInTop 1s ease-out;
 }
 
 header h1 {
@@ -47,12 +48,13 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    font-family: 'Birds of Paradise', cursive;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #aaa; /* Gray accent on hover */
-    transform: scale(1.1); /* Bold hover effect */
+    color: #aaa;
+    transform: scale(1.2) rotate(-5deg);
 }
 
 /* Store Section */
@@ -61,13 +63,14 @@ nav ul li a:hover {
     padding: 50px 0;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 1s forwards, slideInLeft 1s ease-out;
+    animation: fadeInLeft 1s forwards, slideInUp 1s ease-out;
 }
 
 #store h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    animation: bounce 1s ease-in-out;
 }
 
 /* About Section */
@@ -75,13 +78,15 @@ nav ul li a:hover {
     background-color: #fff;
     padding: 50px 0;
     text-align: center;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards, slideInUp 1s ease-out;
 }
 
 #about h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
+    animation: bounce 1s ease-in-out;
 }
 
 /* Contact Section */
@@ -89,13 +94,15 @@ nav ul li a:hover {
     background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards, slideInUp 1s ease-out;
 }
 
 #contact h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
+    animation: bounce 1s ease-in-out;
 }
 
 /* Footer */
@@ -108,23 +115,36 @@ footer {
 }
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes fadeInLeft {
     from {
         opacity: 0;
+        transform: translateX(-100%);
     }
     to {
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@keyframes slideInLeft {
+@keyframes slideInTop {
     from {
-        transform: translateX(-100%);
         opacity: 0;
+        transform: translateY(-50px);
     }
     to {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -134,6 +154,15 @@ footer {
     50% { transform: translateX(5px); }
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Hover Effects */
@@ -149,11 +178,12 @@ button {
 
 button:hover {
     background-color: #333;
-    transform: scale(1.1); /* Scale up on hover for added emphasis */
+    transform: scale(1.1);
 }
 
 a:hover {
     text-decoration: underline;
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* Text styling */
@@ -168,4 +198,3 @@ h2 {
     letter-spacing: 1px;
     font-weight: bold;
 }
-
