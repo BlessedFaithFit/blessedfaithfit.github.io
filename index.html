@@ -1,16 +1,16 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blessed Faith Fit</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Blessed Faith Fit!</h1>
+    <p>Your journey to faith-based fashion starts here.</p>
+  </header>
 
-<!-- Header Section -->
-<header>
-  <h1>Welcome to Blessed Faith Fit</h1>
-  <p>Shop our exclusive collection of clothing to express your faith and style!</p>
-</header>
-
-<!-- Ecwid Store Section -->
-<div class="store-container">
-  <h2>Our Store</h2>
   <div id="my-store-112069554"></div>
   <div>
     <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?112069554&data_platform=code&data_date=2025-02-04" charset="utf-8"></script>
@@ -18,24 +18,9 @@ layout: default
       xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-112069554");
     </script>
   </div>
-</div>
 
-<!-- Blog Posts Section -->
-<div class="home">
-  <h2>Blog Posts</h2>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div>
-
-<!-- Footer Section -->
-<footer>
-  <p>&copy; 2025 Blessed Faith Fit. All Rights Reserved.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Blessed Faith Fit</p>
+  </footer>
+</body>
+</html>
