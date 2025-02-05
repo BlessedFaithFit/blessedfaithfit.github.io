@@ -1,31 +1,79 @@
-/* Strong Hover Effects */
-button {
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Birds+of+Paradise&family=January+Night&display=swap');
+
+/* General Styles */
+body {
     background-color: #000;
     color: #fff;
-    border: 2px solid #fff;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     font-family: 'Bebas Neue', sans-serif;
-    transition: background-color 0.2s, transform 0.2s, border 0.2s;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-button:hover {
-    background-color: #333;
-    transform: scale(1.1); /* Makes the button look tougher and more prominent */
-    border: 2px solid #888; /* Subtle border change */
+/* Header */
+header {
+    background-color: #111;
+    padding: 20px 0;
 }
 
-a {
+.title {
+    font-family: 'January Night', cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: silver;
     text-decoration: none;
-    color: #000;
-    font-family: 'Birds of Paradise', cursive;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #333; /* Slight color shift for a strong effect */
-    transform: scale(1.05); /* No bounce, just a strong scale up */
+nav ul li a:hover {
+    color: #bbb;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+#about p, #contact p {
+    font-family: 'Birds of Paradise', cursive;
+    font-size: 1.5rem;
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
