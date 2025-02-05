@@ -1,16 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlessedFaithFit</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Birds+of+Paradise&family=January+Night&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'January Night', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header */
+        header {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header .logo {
+            width: 150px;
+            margin: 20px 0;
+        }
+
+        header .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #f39c12;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .social-links li a {
+            color: #fff;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links li a:hover {
+            color: #f39c12;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header .title {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            footer .social-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo {
+                width: 120px;
+            }
+
+            .cta-button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
     <header>
         <!-- Add your logo here -->
-        <img src="<img src="https://github.com/BlessedFaithFit/blessedfaithfit.github.io/blob/gh-pages/blessedFaithFit%20(1).png?raw=true" alt="blessedFaithFit (1).png"/>" alt="BlessedFaithFit Logo" class="logo">
+        <!-- STEP 1: Replace 'assets/images/logo.png' with the correct path to your logo -->
+        <img src="assets/images/logo.png" alt="BlessedFaithFit Logo" class="logo">
         <h1 class="title">BlessedFaithFit</h1>
         <nav>
             <ul>
@@ -20,7 +210,13 @@
             </ul>
         </nav>
     </header>
-    
+
+    <section class="hero">
+        <h2>Welcome to BlessedFaithFit</h2>
+        <p>Your journey towards faith, fitness, and fashion starts here.</p>
+        <a href="#store" class="cta-button">Shop Now</a>
+    </section>
+
     <section id="store" class="fade-in">
         <h2>Shop Our Products</h2>
         <!-- Ecwid Store Embed -->
@@ -28,17 +224,17 @@
         <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?112069554&data_platform=code&data_date=2025-02-04" charset="utf-8"></script>
         <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-112069554");</script>
     </section>
-    
+
     <section id="about" class="fade-in">
         <h2>About Us</h2>
-        <p>BlessedFaithFit is all about faith, fitness, and fashion. Our mission is to inspire and empower individuals through our unique designs.</p>
+        <p>BlessedFaithFit is all about faith, fitness, and fashion. Our mission is to inspire and empower individuals through our unique designs that blend style with purpose.</p>
     </section>
-    
+
     <section id="contact" class="fade-in">
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:blessedfaithfit@gmail.com">blessedfaithfit@gmail.com</a></p>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 BlessedFaithFit. All rights reserved.</p>
         <!-- Social Links -->
@@ -48,6 +244,8 @@
             <li><a href="https://blessedfaithfit.company.site/" target="_blank">Shop Now</a></li>
         </ul>
     </footer>
+
 </body>
+
 </html>
 
