@@ -98,6 +98,48 @@
             background-color: #e67e22;
         }
 
+        /* TrustScore Section */
+        .trustscore-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 20px;
+            padding: 4px 12px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            max-width: fit-content;
+            margin-top: 30px;
+        }
+
+        .trustscore-stars {
+            display: flex;
+            gap: 2px;
+            margin-right: 6px;
+        }
+
+        .star-box {
+            background: #00A650;
+            height: 18px;
+            justify-content: center;
+            border-radius: 4px;
+            width: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .star-icon {
+            width: 12px;
+            height: 12px;
+            fill: white;
+        }
+
+        .trustscore-text {
+            white-space: nowrap;
+        }
+
         /* Sections */
         section {
             padding: 50px 20px;
@@ -198,8 +240,6 @@
 <body>
 
     <header>
-        <!-- Add your logo here -->
-        <!-- STEP 1: Replace 'assets/images/logo.png' with the correct path to your logo -->
         <img src="https://github.com/BlessedFaithFit/blessedfaithfit.github.io/blob/gh-pages/blessedFaithFit%20(1).png?raw=true" alt="BlessedFaithFit Logo" class="logo">
         <h1 class="title">BlessedFaithFit</h1>
         <nav>
@@ -219,33 +259,29 @@
 
     <section id="store" class="fade-in">
         <h2>Shop Our Products</h2>
-        <!-- Ecwid Store Embed -->
         <div id="my-store-112069554"></div>
         <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?112069554&data_platform=code&data_date=2025-02-04" charset="utf-8"></script>
         <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-112069554");</script>
-    </section>
 
-    <section id="about" class="fade-in">
-        <h2>About Us</h2>
-        <p>BlessedFaithFit is all about faith, fitness, and fashion. Our mission is to inspire and empower individuals through our unique designs that blend style with purpose.</p>
-    </section>
+        <!-- TrustScore Section Added Here -->
+        <div class="trustscore-container">
+            <div class="trustscore-stars">
+                <div class="star-box">
+                    <svg class="star-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L14.09 8.26H20.94L15.47 12.97L17.56 19.23L12 15.52L6.44 19.23L8.53 12.97L3.06 8.26H9.91L12 2Z"/>
+                    </svg>
+                </div>
+                <div class="star-box">
+                    <svg class="star-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L14.09 8.26H20.94L15.47 12.97L17.56 19.23L12 15.52L6.44 19.23L8.53 12.97L3.06 8.26H9.91L12 2Z"/>
+                    </svg>
+                </div>
+                <div class="star-box">
+                    <svg class="star-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L14.09 8.26H20.94L15.47 12.97L17.56 19.23L12 15.52L6.44 19.23L8.53 12.97L3.06 8.26H9.91L12 2Z"/>
+                    </svg>
+                </div>
+                <div class="star-box">
+                    <svg class
 
-    <section id="contact" class="fade-in">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:blessedfaithfit@gmail.com">blessedfaithfit@gmail.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 BlessedFaithFit. All rights reserved.</p>
-        <!-- Social Links -->
-        <ul class="social-links">
-            <li><a href="https://www.instagram.com/blessedfaithfit" target="_blank">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@blessedfaithfit" target="_blank">TikTok</a></li>
-            <li><a href="https://blessedfaithfit.company.site/" target="_blank">Shop Now</a></li>
-        </ul>
-    </footer>
-
-</body>
-
-</html>
 
